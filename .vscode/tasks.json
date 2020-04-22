@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build with Clang",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-std=c++17",
+        "-stdlib=libc++",
+        "-I/usr/local/Cellar/opencv/4.3.0/include/opencv4/opencv2/",
+        "-I/usr/local/Cellar/opencv/4.3.0/include/opencv4/",
+        "-L/usr/local/Cellar/opencv/4.3.0/lib",
+        "-lopencv_highgui",
+        "-lopencv_core",
+        "-lopencv_imgcodecs",
+        "-lopencv_imgproc",
+        "-lopencv_flann",
+        "-lopencv_photo",
+        "-lopencv_shape",
+        "-lopencv_superres",
+        "-lopencv_videostab",
+        "-lopencv_stitching",
+        "-lopencv_objdetect",
+        "-lopencv_calib3d",
+        "-lopencv_ml",
+        "-lopencv_imgproc",
+        "-lopencv_flann",
+        "-lopencv_core",
+        "${fileDirname}/*.cpp",
+        "-o",
+        "${fileDirname}/build/project.out",
+        "--debug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
