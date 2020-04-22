@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Remote launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/project.out",
+      "preLaunchTask": "Build with Clang",
+      "env": {},
+      "terminal": "integrated"
+    }
+  ]
+}
