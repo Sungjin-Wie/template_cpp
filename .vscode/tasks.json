@@ -2,12 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build with Clang",
+      "label": "Build with g++",
       "type": "shell",
-      "command": "clang++",
+      "command": "g++",
       "args": [
-        "-std=c++17",
-        "-stdlib=libc++",
+        "-g3",
         "${fileDirname}/*.cpp",
         "-o",
         "${fileDirname}/build/project.out",
@@ -16,7 +15,10 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      }
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
